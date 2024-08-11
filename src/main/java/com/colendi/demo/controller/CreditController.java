@@ -34,6 +34,4 @@ public class CreditController {
             @RequestParam(defaultValue = "10") int size) {
         return ResponseEntity.ok(creditService.getByUserId(userId, status, createDate, page, size));
     }
-
-
 }

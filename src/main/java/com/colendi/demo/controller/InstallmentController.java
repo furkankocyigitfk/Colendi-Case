@@ -18,7 +18,7 @@ public class InstallmentController {
     private final IInstallmentService installmentService;
 
     @PutMapping("/update")
-    ResponseEntity<ResponseUpdateInstallment> create(@RequestBody @Validated RequestUpdateInstallment request) {
+    ResponseEntity<ResponseUpdateInstallment> update(@RequestBody @Validated RequestUpdateInstallment request) {
         return ResponseEntity.ok(installmentService.update(request));
     }
 

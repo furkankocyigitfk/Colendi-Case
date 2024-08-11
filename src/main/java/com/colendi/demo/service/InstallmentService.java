@@ -52,7 +52,7 @@ public class InstallmentService implements IInstallmentService {
     @Scheduled(cron = "0 0 0 * * ?")
     // @Scheduled(cron = "0 */1 * * * ?")
     @Transactional
-    public void updateStatus() {
+    public void addPenalty() {
         Timestamp now = new Timestamp(System.currentTimeMillis());
         List<Installment> installments = installmentRepository.findByInstallmentStatusAndDueDateBefore(InstallmentStatus.OPEN, now);
         for (Installment installment : installments) {
@@ -76,7 +76,7 @@ public class InstallmentService implements IInstallmentService {
     }
 
     private static Installment getInstallment(RequestUpdateInstallment request, Installment installment) {
-        if (!InstallmentStatus.OPEN.equals(installment.getInstallmentStatus())) {
+        if (InstallmentStatus.CLOSED.equals(installment.getInstallmentStatus())) {
             throw new MicroException("Installement has already paid before");
         }
         if (installment.getAmount().compareTo(request.getAmount()) <= 0) {
