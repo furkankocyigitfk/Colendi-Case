@@ -1,6 +1,6 @@
 # Colendi-Case
 
-## How to run
+## Docker ile ayağa kaldırma
 ### docker build -t colendi-case .
 ### docker run -p 8080:8080 colendi-case
 
