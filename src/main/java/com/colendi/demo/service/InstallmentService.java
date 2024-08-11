@@ -49,8 +49,8 @@ public class InstallmentService implements IInstallmentService {
         return installmentMapper.toResponseUpdateInstallment(savedInstallment);
     }
 
-    // @Scheduled(cron = "0 0 0 * * ?")
-    @Scheduled(cron = "0 */1 * * * ?")
+    @Scheduled(cron = "0 0 0 * * ?")
+    // @Scheduled(cron = "0 */1 * * * ?")
     @Transactional
     public void updateStatus() {
         Timestamp now = new Timestamp(System.currentTimeMillis());
