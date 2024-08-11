@@ -15,3 +15,5 @@
 ![resim](https://github.com/user-attachments/assets/0c6b0a32-3f46-4940-a9de-4ec9a340345d)
 ### Gecikme faizi olanlar için ekleme gecikme faizi uygulanması
 ![resim](https://github.com/user-attachments/assets/96ac190d-ea99-4cb3-9782-03efbb703723)
+### Coverage oranı
+![resim](https://github.com/user-attachments/assets/26991610-353a-45de-be78-871977a3a06e)
